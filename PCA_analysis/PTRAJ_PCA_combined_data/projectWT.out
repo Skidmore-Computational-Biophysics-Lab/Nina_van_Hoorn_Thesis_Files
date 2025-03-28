@@ -1,0 +1,153 @@
+ERROR: Unable to locate a modulefile for 'cuda92/toolkit/9.2.88'
+ERROR: Unable to locate a modulefile for 'cuda75/toolkit'
+
+CPPTRAJ: Trajectory Analysis. V6.24.0 (AmberTools)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 02/27/25 15:25:29
+| Available memory: 39.371 GB
+
+INPUT: Reading input from 'projectingWT.ptraj'
+  [parm /data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_nowat.prmtop name A3F_prmtop]
+	Reading '/data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_nowat.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+  [trajin ../../WT_files/VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd parm A3F_prmtop]
+	Reading '../../WT_files/VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd' as Amber NetCDF
+  [run]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: A3F_prmtop VCBC-A3F_WT_nowat.prmtop, 12060 atoms, 747 res, box: None, 7 mol
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd' is a NetCDF (NetCDF3) AMBER trajectory with coordinates, time, Parm VCBC-A3F_WT_nowat.prmtop (reading 480000 of 480000)
+  Coordinate processing will occur on 480000 frames.
+
+BEGIN TRAJECTORY PROCESSING:
+----- VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd (1-480000, 1) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 480000 frames and processed 480000 frames.
+TIME: Avg. throughput= 546.3055 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.00%)
+TIME:		Trajectory Process : 878.6292 s (100.00%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0000 s (  0.00%)
+TIME:		Other              : 0.0000 s (  0.00%)
+TIME:	Run Total 878.6292 s
+---------- RUN END ---------------------------------------------------
+  [loadcrd ../../WT_files/VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd parm A3F_prmtop name A3F_coordinates]
+	Reading '../../WT_files/VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd' as Amber NetCDF
+	Loading trajectory '../../WT_files/VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd' as 'A3F_coordinates'
+----- VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd (1-480000, 1) -----
+  [loadcrd /data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_tleap.pdb parm A3F_prmtop name pdb_coordinates]
+	Reading '/data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_tleap.pdb' as PDB
+Warning: PDB line length is short (67 chars, expected 80).
+Warning: Could not determine atomic number from name [D1]
+Warning: Could not determine atomic number from name [D2]
+Warning: Could not determine atomic number from name [D3]
+Warning: Could not determine atomic number from name [D4]
+Warning: Could not determine atomic number from name [D1]
+Warning: Could not determine atomic number from name [D2]
+Warning: Could not determine atomic number from name [D3]
+Warning: Could not determine atomic number from name [D4]
+	Loading trajectory '/data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_tleap.pdb' as 'pdb_coordinates'
+----- VCBC-A3F_WT_tleap.pdb (1-1, 1) -----
+  [crdaction pdb_coordinates projection evecs VCBC_A3F_evecs_new.dat @CA out pdb_project_onto_evecs.dat beg 1 end 10]
+	Using set 'pdb_coordinates'
+----- pdb_coordinates (1-1, 1) -----
+	Reading modes from VCBC_A3F_evecs_new.dat
+	File contains 10 modes.
+	Attempting to read 10 modes (1 to 10) from VCBC_A3F_evecs_new.dat
+    PROJECTION: Calculating projection using eigenvectors 1 to 10 of VCBC_A3F_evecs_new.dat
+	Results are written to pdb_project_onto_evecs.dat
+	Start: 1  Stop: Final frame
+	Atom Mask: [@CA]
+	Mask [@CA] corresponds to 745 atoms.
+100% Complete.
+TIME: Total action execution time: 0.0438 seconds.
+  [crdaction A3F_coordinates projection evecs VCBC_A3F_evecs_new.dat @CA out VCBC_A3F_project_onto_evecs.dat beg 1 end 10]
+	Using set 'A3F_coordinates'
+----- A3F_coordinates (1-480000, 1) -----
+    PROJECTION: Calculating projection using eigenvectors 1 to 10 of VCBC_A3F_evecs_new.dat
+	Results are written to VCBC_A3F_project_onto_evecs.dat
+	Start: 1  Stop: Final frame
+	Atom Mask: [@CA]
+	Mask [@CA] corresponds to 745 atoms.
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+TIME: Total action execution time: 27.3770 seconds.
+  [run]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: A3F_prmtop VCBC-A3F_WT_nowat.prmtop, 12060 atoms, 747 res, box: None, 7 mol
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd' is a NetCDF (NetCDF3) AMBER trajectory with coordinates, time, Parm VCBC-A3F_WT_nowat.prmtop (reading 480000 of 480000)
+  Coordinate processing will occur on 480000 frames.
+
+BEGIN TRAJECTORY PROCESSING:
+----- VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd (1-480000, 1) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 480000 frames and processed 480000 frames.
+TIME: Avg. throughput= 526.9492 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+DATASETS (23 total):
+	A3F_coordinates "A3F_coordinates" (coordinates), size is 480000 (748.043 MB)
+	pdb_coordinates "pdb_coordinates" (coordinates), size is 480000 (746.123 MB)
+	VCBC_A3F_evecs_new.dat "VCBC_A3F_evecs_new.dat" (eigenmodes, matrix(covariance)), size is 10 (196.787 kB)
+	Proj_00004:1 "Mode1" (float), size is 1 (0.004 kB)
+	Proj_00004:2 "Mode2" (float), size is 1 (0.004 kB)
+	Proj_00004:3 "Mode3" (float), size is 1 (0.004 kB)
+	Proj_00004:4 "Mode4" (float), size is 1 (0.004 kB)
+	Proj_00004:5 "Mode5" (float), size is 1 (0.004 kB)
+	Proj_00004:6 "Mode6" (float), size is 1 (0.004 kB)
+	Proj_00004:7 "Mode7" (float), size is 1 (0.004 kB)
+	Proj_00004:8 "Mode8" (float), size is 1 (0.004 kB)
+	Proj_00004:9 "Mode9" (float), size is 1 (0.004 kB)
+	Proj_00004:10 "Mode10" (float), size is 1 (0.004 kB)
+	Proj_00014:1 "Mode1" (float), size is 480000 (1.920 MB)
+	Proj_00014:2 "Mode2" (float), size is 480000 (1.920 MB)
+	Proj_00014:3 "Mode3" (float), size is 480000 (1.920 MB)
+	Proj_00014:4 "Mode4" (float), size is 480000 (1.920 MB)
+	Proj_00014:5 "Mode5" (float), size is 480000 (1.920 MB)
+	Proj_00014:6 "Mode6" (float), size is 480000 (1.920 MB)
+	Proj_00014:7 "Mode7" (float), size is 480000 (1.920 MB)
+	Proj_00014:8 "Mode8" (float), size is 480000 (1.920 MB)
+	Proj_00014:9 "Mode9" (float), size is 480000 (1.920 MB)
+	Proj_00014:10 "Mode10" (float), size is 480000 (1.920 MB)
+    Total data set memory usage is at least 1.514 GB
+
+DATAFILES (2 total):
+  pdb_project_onto_evecs.dat (Standard Data File):  Mode1 Mode2 Mode3 Mode4 Mode5 Mode6 Mode7 Mode8 Mode9 Mode10
+  VCBC_A3F_project_onto_evecs.dat (Standard Data File):  Mode1 Mode2 Mode3 Mode4 Mode5 Mode6 Mode7 Mode8 Mode9 Mode10
+
+RUN TIMING:
+TIME:		Init               : 25.4964 s (  2.72%)
+TIME:		Trajectory Process : 910.9037 s ( 97.28%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0001 s (  0.00%)
+TIME:		Other              : 0.0000 s (  0.00%)
+TIME:	Run Total 936.4003 s
+---------- RUN END ---------------------------------------------------
+  [quit]
+TIME: Total execution time: 2656.7412 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+
