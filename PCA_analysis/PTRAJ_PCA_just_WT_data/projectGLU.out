@@ -1,0 +1,118 @@
+ERROR: Unable to locate a modulefile for 'cuda92/toolkit/9.2.88'
+ERROR: Unable to locate a modulefile for 'cuda75/toolkit'
+
+CPPTRAJ: Trajectory Analysis. V6.24.0 (AmberTools)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 03/19/25 02:14:59
+| Available memory: 95.732 GB
+
+INPUT: Reading input from 'projectingGLU.ptraj'
+  [parm /home/nvanhoorn/data/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/VCBC-A3F_GLU_mut_nowat.prmtop name nowat_prmtop]
+	Reading '/home/nvanhoorn/data/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/VCBC-A3F_GLU_mut_nowat.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+  [trajin ../../../mdcrd/VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd parm nowat_prmtop]
+	Reading '../../../mdcrd/VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd' as Amber NetCDF
+  [run]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: nowat_prmtop VCBC-A3F_GLU_mut_nowat.prmtop, 12053 atoms, 747 res, box: None, 7 mol
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd' is a NetCDF (NetCDF3) AMBER trajectory with coordinates, time, Parm VCBC-A3F_GLU_mut_nowat.prmtop (reading 480000 of 480000)
+  Coordinate processing will occur on 480000 frames.
+
+BEGIN TRAJECTORY PROCESSING:
+----- VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd (1-480000, 1) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 480000 frames and processed 480000 frames.
+TIME: Avg. throughput= 557.8738 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.00%)
+TIME:		Trajectory Process : 860.4096 s (100.00%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0002 s (  0.00%)
+TIME:		Other              : 0.0001 s (  0.00%)
+TIME:	Run Total 860.4099 s
+---------- RUN END ---------------------------------------------------
+  [loadcrd ../../../mdcrd/VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd parm nowat_prmtop name VCBC_A3F_coordinates]
+	Reading '../../../mdcrd/VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd' as Amber NetCDF
+	Loading trajectory '../../../mdcrd/VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd' as 'VCBC_A3F_coordinates'
+----- VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd (1-480000, 1) -----
+  [crdaction VCBC_A3F_coordinates projection evecs VCBC_A3F_evecs_new.dat @CA out GLU_mut_project_onto_evecs.dat beg 1 end 10]
+	Using set 'VCBC_A3F_coordinates'
+----- VCBC_A3F_coordinates (1-480000, 1) -----
+	Reading modes from VCBC_A3F_evecs_new.dat
+	File contains 10 modes.
+	Attempting to read 10 modes (1 to 10) from VCBC_A3F_evecs_new.dat
+    PROJECTION: Calculating projection using eigenvectors 1 to 10 of VCBC_A3F_evecs_new.dat
+	Results are written to GLU_mut_project_onto_evecs.dat
+	Start: 1  Stop: Final frame
+	Atom Mask: [@CA]
+	Mask [@CA] corresponds to 745 atoms.
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+TIME: Total action execution time: 19.9187 seconds.
+  [run]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: nowat_prmtop VCBC-A3F_GLU_mut_nowat.prmtop, 12053 atoms, 747 res, box: None, 7 mol
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd' is a NetCDF (NetCDF3) AMBER trajectory with coordinates, time, Parm VCBC-A3F_GLU_mut_nowat.prmtop (reading 480000 of 480000)
+  Coordinate processing will occur on 480000 frames.
+
+BEGIN TRAJECTORY PROCESSING:
+----- VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd (1-480000, 1) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 480000 frames and processed 480000 frames.
+TIME: Avg. throughput= 862.5373 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+DATASETS (12 total):
+	VCBC_A3F_coordinates "VCBC_A3F_coordinates" (coordinates), size is 480000 (707.723 MB)
+	VCBC_A3F_evecs_new.dat "VCBC_A3F_evecs_new.dat" (eigenmodes, matrix(covariance)), size is 10 (196.787 kB)
+	Proj_00003:1 "Mode1" (float), size is 480000 (1.920 MB)
+	Proj_00003:2 "Mode2" (float), size is 480000 (1.920 MB)
+	Proj_00003:3 "Mode3" (float), size is 480000 (1.920 MB)
+	Proj_00003:4 "Mode4" (float), size is 480000 (1.920 MB)
+	Proj_00003:5 "Mode5" (float), size is 480000 (1.920 MB)
+	Proj_00003:6 "Mode6" (float), size is 480000 (1.920 MB)
+	Proj_00003:7 "Mode7" (float), size is 480000 (1.920 MB)
+	Proj_00003:8 "Mode8" (float), size is 480000 (1.920 MB)
+	Proj_00003:9 "Mode9" (float), size is 480000 (1.920 MB)
+	Proj_00003:10 "Mode10" (float), size is 480000 (1.920 MB)
+    Total data set memory usage is at least 727.120 MB
+
+DATAFILES (1 total):
+  GLU_mut_project_onto_evecs.dat (Standard Data File):  Mode1 Mode2 Mode3 Mode4 Mode5 Mode6 Mode7 Mode8 Mode9 Mode10
+
+RUN TIMING:
+TIME:		Init               : 0.0007 s (  0.00%)
+TIME:		Trajectory Process : 556.4977 s (100.00%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0001 s (  0.00%)
+TIME:		Other              : 0.0000 s (  0.00%)
+TIME:	Run Total 556.4985 s
+---------- RUN END ---------------------------------------------------
+  [quit]
+TIME: Total execution time: 2324.6238 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+
