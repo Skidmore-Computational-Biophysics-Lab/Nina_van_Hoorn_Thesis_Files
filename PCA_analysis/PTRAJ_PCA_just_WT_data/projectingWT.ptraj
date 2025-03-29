@@ -1,0 +1,13 @@
+
+parm /data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_nowat.prmtop name A3F_prmtop
+trajin ../../../WT_files/VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd parm A3F_prmtop
+run
+
+loadcrd ../../../WT_files/VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd parm A3F_prmtop name A3F_coordinates
+loadcrd /data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_tleap.pdb parm A3F_prmtop name pdb_coordinates
+
+crdaction pdb_coordinates projection evecs VCBC_A3F_evecs_new.dat @CA out pdb_project_onto_evecs.dat beg 1 end 10
+crdaction A3F_coordinates projection evecs VCBC_A3F_evecs_new.dat @CA out VCBC_A3F_project_onto_evecs.dat beg 1 end 10
+run
+
+quit
