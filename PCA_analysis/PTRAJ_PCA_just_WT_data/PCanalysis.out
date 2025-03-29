@@ -1,0 +1,211 @@
+ERROR: Unable to locate a modulefile for 'cuda92/toolkit/9.2.88'
+ERROR: Unable to locate a modulefile for 'cuda75/toolkit'
+
+CPPTRAJ: Trajectory Analysis. V6.24.0 (AmberTools)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 03/19/25 02:09:06
+| Available memory: 122.619 GB
+
+INPUT: Reading input from 'PCanalysis.ptraj'
+  [parm /data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_nowat.prmtop name VCBC_A3F]
+	Reading '/data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_nowat.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+  [trajin /data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd parm VCBC_A3F 1 last 10]
+	Reading '/data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd' as Amber NetCDF
+  [rms first @C,CA,N]
+    RMSD: (@C,CA,N), reference is first frame (@C,CA,N).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+  [average avg.crd]
+	Writing 'avg.crd' as Amber Trajectory
+    AVERAGE: Averaging over coordinates in mask [*]
+	Start: 1  Stop: Final frame
+	Writing averaged coords to file 'avg.crd'
+  [run]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: VCBC_A3F VCBC-A3F_WT_nowat.prmtop, 12060 atoms, 747 res, box: None, 7 mol
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd' is a NetCDF (NetCDF3) AMBER trajectory with coordinates, time, Parm VCBC-A3F_WT_nowat.prmtop (reading 48000 of 480000)
+  Coordinate processing will occur on 48000 frames.
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'VCBC-A3F_WT_nowat.prmtop' (2 actions):
+  0: [rms first @C,CA,N]
+	Target mask: [@C,CA,N](2235)
+	Reference topology: VCBC-A3F_WT_nowat.prmtop
+	Reference mask: [@C,CA,N](2235)
+  1: [average avg.crd]
+	Mask [*] corresponds to 12060 atoms.
+	Averaging over 12060 atoms.
+----- VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd (1-480000, 10) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 48000 frames and processed 48000 frames.
+TIME: Avg. throughput= 1286.7073 frames / second.
+
+ACTION OUTPUT:
+    AVERAGE: 48000 frames,  'avg.crd' is an AMBER trajectory, Parm VCBC-A3F_WT_nowat.prmtop: Writing 1 frames (1-Last, 1)
+TIME: Analyses took 0.0000 seconds.
+
+DATASETS (1 total):
+	RMSD_00001 "RMSD_00001" (double, rms), size is 48000 (384.000 kB)
+    Total data set memory usage is at least 384.000 kB
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.00%)
+TIME:		Trajectory Process : 37.3045 s ( 99.96%)
+TIME:		Action Post        : 0.0119 s (  0.03%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0000 s (  0.00%)
+TIME:		Other              : 0.0015 s (  0.00%)
+TIME:	Run Total 37.3179 s
+---------- RUN END ---------------------------------------------------
+  [reference avg.crd [avg] parm VCBC_A3F]
+	Reading 'avg.crd' as Amber Trajectory
+	Setting active reference for distance-based masks: 'avg.crd'
+  [rms ref [avg] @C,CA,N]
+    RMSD: (@C,CA,N), reference is "Cpptraj Generated trajectory                                                    
+" (@C,CA,N).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+  [matrix covar name VCBC_A3F_matrix @CA]
+    MATRIX: Calculating covariance matrix, output is by atom.
+	Matrix data set is 'VCBC_A3F_matrix'
+	Start: 1  Stop: Final frame
+	Mask1 is '@CA'
+  [run]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: VCBC_A3F VCBC-A3F_WT_nowat.prmtop, 12060 atoms, 747 res, box: None, 7 mol
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd' is a NetCDF (NetCDF3) AMBER trajectory with coordinates, time, Parm VCBC-A3F_WT_nowat.prmtop (reading 48000 of 480000)
+  Coordinate processing will occur on 48000 frames.
+
+REFERENCE FRAMES (1 total):
+    0: [avg]:1
+	Active reference frame for distance-based masks is 'Cpptraj Generated trajectory                                                    
+'
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'VCBC-A3F_WT_nowat.prmtop' (2 actions):
+  0: [rms ref [avg] @C,CA,N]
+	Target mask: [@C,CA,N](2235)
+	Reference topology: VCBC-A3F_WT_nowat.prmtop
+	Reference mask: [@C,CA,N](2235)
+  1: [matrix covar name VCBC_A3F_matrix @CA]
+	Mask [@CA] corresponds to 745 atoms.
+----- VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd (1-480000, 10) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 48000 frames and processed 48000 frames.
+TIME: Avg. throughput= 651.6758 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+DATASETS (3 total):
+	RMSD_00001 "RMSD_00001" (double, rms), size is 48000 (384.000 kB)
+	RMSD_00003 "RMSD_00003" (double, rms), size is 48000 (384.000 kB)
+	VCBC_A3F_matrix "VCBC_A3F_matrix" (double matrix, matrix(covariance)), size is 2498730 (19.990 MB)
+    Total data set memory usage is at least 20.758 MB
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.00%)
+TIME:		Trajectory Process : 73.6563 s (100.00%)
+TIME:		Action Post        : 0.0026 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0000 s (  0.00%)
+TIME:		Other              : 0.0000 s (  0.00%)
+TIME:	Run Total 73.6589 s
+---------- RUN END ---------------------------------------------------
+  [runanalysis diagmatrix VCBC_A3F_matrix vecs 10 name VCBC_A3F_evecs out VCBC_A3F_evecs_new.dat nmwiz nmwizvecs 3 nmwizfile VCBC_A3F_evecs.nmd nmwizmask @CA]
+	Mask [@CA] corresponds to 745 atoms.
+	nmwiz topology 745 atoms, 745 res, box: None, 0 mol
+	Changed DataFile 'VCBC_A3F_evecs_new.dat' type to Evecs file for set VCBC_A3F_evecs
+    DIAGMATRIX: Diagonalizing matrix VCBC_A3F_matrix and writing modes to VCBC_A3F_evecs_new.dat
+	Calculating 10 eigenvectors.
+	Writing 3 modes to NMWiz file VCBC_A3F_evecs.nmd	Storing modes with name: VCBC_A3F_evecs
+	Eigenmode calculation for 'VCBC_A3F_matrix'
+	Calculating eigenvectors and eigenvalues.
+	Calculating first 10 eigenmodes.
+TIME: Total analysis execution time: 0.2451 seconds.
+  [runanalysis diagmatrix VCBC_A3F_matrix vecs 100 name VCBC_A3F_evecs_100]
+    DIAGMATRIX: Diagonalizing matrix VCBC_A3F_matrix
+	Calculating 100 eigenvectors.
+	Storing modes with name: VCBC_A3F_evecs_100
+	Eigenmode calculation for 'VCBC_A3F_matrix'
+	Calculating eigenvectors and eigenvalues.
+	Calculating first 100 eigenmodes.
+TIME: Total analysis execution time: 1.7391 seconds.
+  [runanalysis modes eigenval name VCBC_A3F_evecs_100 beg 1 end 100 out VCBC_A3F_eigenval_frac_new.dat]
+    ANALYZE MODES: Calculating eigenvalue fraction using modes from VCBC_A3F_evecs_100
+	Results are written to 'VCBC_A3F_eigenval_frac_new.dat'
+	Modes 'VCBC_A3F_evecs_100', not mass-weighted
+	100 eigenvalues, sum is 11140.716100
+TIME: Total analysis execution time: 0.0001 seconds.
+  [run]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: VCBC_A3F VCBC-A3F_WT_nowat.prmtop, 12060 atoms, 747 res, box: None, 7 mol
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd' is a NetCDF (NetCDF3) AMBER trajectory with coordinates, time, Parm VCBC-A3F_WT_nowat.prmtop (reading 48000 of 480000)
+  Coordinate processing will occur on 48000 frames.
+
+REFERENCE FRAMES (1 total):
+    0: [avg]:1
+	Active reference frame for distance-based masks is 'Cpptraj Generated trajectory                                                    
+'
+
+BEGIN TRAJECTORY PROCESSING:
+----- VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd (1-480000, 10) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 48000 frames and processed 48000 frames.
+TIME: Avg. throughput= 6496.9158 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+DATASETS (8 total):
+	RMSD_00001 "RMSD_00001" (double, rms), size is 48000 (384.000 kB)
+	RMSD_00003 "RMSD_00003" (double, rms), size is 48000 (384.000 kB)
+	VCBC_A3F_matrix "VCBC_A3F_matrix" (double matrix, matrix(covariance)), size is 2498730 (19.990 MB)
+	VCBC_A3F_evecs "VCBC_A3F_evecs" (eigenmodes(covariance)), size is 10 (196.787 kB)
+	VCBC_A3F_evecs_100 "VCBC_A3F_evecs_100" (eigenmodes(covariance)), size is 100 (1.807 MB)
+	XEVAL_00007[Frac] "XEVAL_00007[Frac]" (double), size is 100 (0.800 kB)
+	XEVAL_00007[Cumulative] "XEVAL_00007[Cumulative]" (double), size is 100 (0.800 kB)
+	XEVAL_00007[Eigenval] "XEVAL_00007[Eigenval]" (double), size is 100 (0.800 kB)
+    Total data set memory usage is at least 22.764 MB
+
+DATAFILES (3 total):
+  VCBC_A3F_evecs_new.dat (Evecs file):  VCBC_A3F_evecs
+  VCBC_A3F_eigenval_frac_new.dat (Standard Data File):  XEVAL_00007[Frac] XEVAL_00007[Cumulative] XEVAL_00007[Eigenval]
+  VCBC_A3F_evecs.nmd (NMwiz output)
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.00%)
+TIME:		Trajectory Process : 7.3881 s (100.00%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0000 s (  0.00%)
+TIME:		Other              : 0.0000 s (  0.00%)
+TIME:	Run Total 7.3882 s
+---------- RUN END ---------------------------------------------------
+  [quit]
+TIME: Total execution time: 120.3971 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+
