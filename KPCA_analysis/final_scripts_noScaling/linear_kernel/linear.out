@@ -1,0 +1,7 @@
+/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/decomposition/_kernel_pca.py:415: LinAlgWarning: Ill-conditioned matrix (rcond=4.55245e-09): result may not be accurate.
+  self.dual_coef_ = linalg.solve(K, X, assume_a="pos", overwrite_a=True)
+training data shape (96000, 2968, 3)
+reduced training data shape (3840, 2968, 3)
+******************** Starting KPCA ********************
+******************** KPCA Finished ********************
+******************** Finished ********************
