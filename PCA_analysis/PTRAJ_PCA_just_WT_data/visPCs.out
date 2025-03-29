@@ -1,0 +1,122 @@
+ERROR: Unable to locate a modulefile for 'cuda92/toolkit/9.2.88'
+ERROR: Unable to locate a modulefile for 'cuda75/toolkit'
+
+CPPTRAJ: Trajectory Analysis. V6.24.0 (AmberTools)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 03/19/25 10:41:21
+| Available memory: 125.682 GB
+
+INPUT: Reading input from 'visualizingPCs.ptraj'
+  [parm /data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_nowat.prmtop name VCBC_A3F]
+	Reading '/data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_nowat.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+  [trajin /data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd parm VCBC_A3F 1 last 10]
+	Reading '/data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/WT_files/VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd' as Amber NetCDF
+  [readdata VCBC_A3F_evecs_new.dat name my_evecs]
+	Reading 'VCBC_A3F_evecs_new.dat' as Evecs file with name 'my_evecs'
+	Reading modes from VCBC_A3F_evecs_new.dat
+	File contains 10 modes.
+	Attempting to read 10 modes (1 to 10) from VCBC_A3F_evecs_new.dat
+  [runanalysis modes name my_evecs trajout pc1.mdcrd trajoutfmt netcdf trajoutmask @CA pcmin -293 pcmax 130 tmode 1]
+	Mask [@CA] corresponds to 745 atoms.
+	Writing 'pc1.mdcrd' as Amber NetCDF
+    ANALYZE MODES: Calculating coordinate projection using modes from my_evecs
+	Creating trajectory for mode 1
+	Writing to trajectory pc1.mdcrd
+	PC range: -293.000000 to 130.000000
+	Scaling factor: 1.000000
+	Modes 'my_evecs', not mass-weighted
+Warning: Setting NetCDF variable compression requires compiling with HDF5 support.
+Warning: Setting NetCDF frame chunk size requires compiling with HDF5 support.
+TIME: Total analysis execution time: 0.0427 seconds.
+  [runanalysis modes name my_evecs trajout pc2.mdcrd trajoutfmt netcdf trajoutmask @CA pcmin -472 pcmax 140 tmode 2]
+	Mask [@CA] corresponds to 745 atoms.
+	Writing 'pc2.mdcrd' as Amber NetCDF
+    ANALYZE MODES: Calculating coordinate projection using modes from my_evecs
+	Creating trajectory for mode 2
+	Writing to trajectory pc2.mdcrd
+	PC range: -472.000000 to 140.000000
+	Scaling factor: 1.000000
+	Modes 'my_evecs', not mass-weighted
+Warning: Setting NetCDF variable compression requires compiling with HDF5 support.
+Warning: Setting NetCDF frame chunk size requires compiling with HDF5 support.
+TIME: Total analysis execution time: 0.0594 seconds.
+  [runanalysis modes name my_evecs trajout pc3.mdcrd trajoutfmt netcdf trajoutmask @CA pcmin -107 pcmax 79 tmode 3]
+	Mask [@CA] corresponds to 745 atoms.
+	Writing 'pc3.mdcrd' as Amber NetCDF
+    ANALYZE MODES: Calculating coordinate projection using modes from my_evecs
+	Creating trajectory for mode 3
+	Writing to trajectory pc3.mdcrd
+	PC range: -107.000000 to 79.000000
+	Scaling factor: 1.000000
+	Modes 'my_evecs', not mass-weighted
+Warning: Setting NetCDF variable compression requires compiling with HDF5 support.
+Warning: Setting NetCDF frame chunk size requires compiling with HDF5 support.
+TIME: Total analysis execution time: 0.0197 seconds.
+  [runanalysis modes name my_evecs trajout pc4.mdcrd trajoutfmt netcdf trajoutmask @CA pcmin -63 pcmax 117 tmode 4]
+	Mask [@CA] corresponds to 745 atoms.
+	Writing 'pc4.mdcrd' as Amber NetCDF
+    ANALYZE MODES: Calculating coordinate projection using modes from my_evecs
+	Creating trajectory for mode 4
+	Writing to trajectory pc4.mdcrd
+	PC range: -63.000000 to 117.000000
+	Scaling factor: 1.000000
+	Modes 'my_evecs', not mass-weighted
+Warning: Setting NetCDF variable compression requires compiling with HDF5 support.
+Warning: Setting NetCDF frame chunk size requires compiling with HDF5 support.
+TIME: Total analysis execution time: 0.0192 seconds.
+  [strip !(@CA) outprefix modes]
+    STRIP: Stripping atoms in mask [!(@CA)]
+	Writing 'stripped' topology file with prefix 'modes'
+  [run]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: VCBC_A3F VCBC-A3F_WT_nowat.prmtop, 12060 atoms, 747 res, box: None, 7 mol
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd' is a NetCDF (NetCDF3) AMBER trajectory with coordinates, time, Parm VCBC-A3F_WT_nowat.prmtop (reading 48000 of 480000)
+  Coordinate processing will occur on 48000 frames.
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'VCBC-A3F_WT_nowat.prmtop' (1 actions):
+  0: [strip !(@CA) outprefix modes]
+	Stripping 11315 atoms.
+	Stripped topology: 745 atoms, 745 res, box: None, 745 mol
+	Writing topology 0 (VCBC-A3F_WT_nowat.prmtop) to 'modes.VCBC-A3F_WT_nowat.prmtop' with format Amber Topology
+	Memory used by full exclusion list: 0.000 kB
+	Topology has alternative residue numbering (from e.g PDB, stripping, reordering, etc).
+----- VCBC-A3F_WT_sims1-8_first300_noBox.mdcrd (1-480000, 10) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 48000 frames and processed 48000 frames.
+TIME: Avg. throughput= 512.2356 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+DATASETS (1 total):
+	my_evecs "my_evecs" (eigenmodes, matrix(covariance)), size is 10 (196.787 kB)
+    Total data set memory usage is at least 196.787 kB
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.00%)
+TIME:		Trajectory Process : 93.7069 s (100.00%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0000 s (  0.00%)
+TIME:		Other              : 0.0000 s (  0.00%)
+TIME:	Run Total 93.7070 s
+---------- RUN END ---------------------------------------------------
+  [quit]
+TIME: Total execution time: 93.9055 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+
