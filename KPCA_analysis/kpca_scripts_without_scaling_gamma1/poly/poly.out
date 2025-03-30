@@ -1,0 +1,26 @@
+/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/metrics/pairwise.py:1499: RuntimeWarning: overflow encountered in power
+  K **= degree
+training data shape (96000, 2968, 3)
+reduced training data shape (3840, 2968, 3)
+******************** Starting KPCA ********************
+Traceback (most recent call last):
+  File "/data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/analysis/kernel_PCA/final_scripts_noScaling_gamma1/poly/poly.py", line 62, in <module>
+    poly_kernel_pca = kernel_pca_poly.fit(train_data)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/decomposition/_kernel_pca.py", line 450, in fit
+    self._fit_inverse_transform(X_transformed, X)
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/decomposition/_kernel_pca.py", line 415, in _fit_inverse_transform
+    self.dual_coef_ = linalg.solve(K, X, assume_a="pos", overwrite_a=True)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/scipy/linalg/_basic.py", line 256, in solve
+    anorm = _matrix_norm(norm, a1, check_finite)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/scipy/linalg/_basic.py", line 379, in _matrix_norm_general
+    a = np.asarray_chkfinite(a) if check_finite else a
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/numpy/lib/function_base.py", line 630, in asarray_chkfinite
+    raise ValueError(
+ValueError: array must not contain infs or NaNs
