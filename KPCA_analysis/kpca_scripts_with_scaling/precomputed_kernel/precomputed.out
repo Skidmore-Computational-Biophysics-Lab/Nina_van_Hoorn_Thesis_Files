@@ -1,0 +1,13 @@
+training data shape (96000, 2968, 3)
+reduced training data shape (3840, 2968, 3)
+******************** Starting KPCA ********************
+Traceback (most recent call last):
+  File "/data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/analysis/kernel_PCA/final_scripts/precomputed_kernel/precomputed.py", line 62, in <module>
+    precomputed_kernel_pca = kernel_pca_precomputed.fit(train_data)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/decomposition/_kernel_pca.py", line 437, in fit
+    raise ValueError("Cannot fit_inverse_transform with a precomputed kernel.")
+ValueError: Cannot fit_inverse_transform with a precomputed kernel.
