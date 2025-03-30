@@ -1,0 +1,39 @@
+training data shape (96000, 2968, 3)
+reduced training data shape (3840, 2968, 3)
+******************** Starting KPCA ********************
+Traceback (most recent call last):
+  File "/data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/analysis/kernel_PCA/final_scripts_noScaling_gamma10/sigmoid/sigmoid.py", line 62, in <module>
+    sigmoid_kernel_pca = kernel_pca_sigmoid.fit(train_data)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/decomposition/_kernel_pca.py", line 450, in fit
+    self._fit_inverse_transform(X_transformed, X)
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/decomposition/_kernel_pca.py", line 413, in _fit_inverse_transform
+    K = self._get_kernel(X_transformed)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/decomposition/_kernel_pca.py", line 324, in _get_kernel
+    return pairwise_kernels(
+           ^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 189, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/metrics/pairwise.py", line 2673, in pairwise_kernels
+    return _parallel_pairwise(X, Y, func, n_jobs, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/metrics/pairwise.py", line 1973, in _parallel_pairwise
+    return func(X, Y, **kwds)
+           ^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 189, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/metrics/pairwise.py", line 1554, in sigmoid_kernel
+    X, Y = check_pairwise_arrays(X, Y)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/metrics/pairwise.py", line 190, in check_pairwise_arrays
+    X = Y = check_array(
+            ^^^^^^^^^^^^
+  File "/cm/shared/apps/anaconda3/python3.12/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1139, in check_array
+    raise ValueError(
+ValueError: Found array with 0 feature(s) (shape=(3840, 0)) while a minimum of 1 is required by check_pairwise_arrays.
