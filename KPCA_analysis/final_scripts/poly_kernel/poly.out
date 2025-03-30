@@ -1,5 +1,0 @@
-training data shape (96000, 2968, 3)
-reduced training data shape (3840, 2968, 3)
-******************** Starting KPCA ********************
-******************** KPCA Finished ********************
-******************** Finished ********************
