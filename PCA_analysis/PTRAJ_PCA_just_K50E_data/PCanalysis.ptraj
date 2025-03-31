@@ -1,0 +1,21 @@
+parm /data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/VCBC-A3F_GLU_mut_nowat.prmtop name GLU_mut
+trajin /data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/mdcrd/VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd parm GLU_mut 1 last 10
+
+rms first @C,CA,N
+average avg.crd
+run
+
+reference avg.crd [avg] parm GLU_mut
+rms ref [avg] @C,CA,N
+matrix covar name VCBC_A3F_matrix @CA
+run
+
+runanalysis diagmatrix VCBC_A3F_matrix vecs 10 name VCBC_A3F_evecs out VCBC_A3F_evecs_new.dat nmwiz nmwizvecs 3 nmwizfile VCBC_A3F_evecs.nmd nmwizmask @CA
+runanalysis diagmatrix VCBC_A3F_matrix vecs 100 name VCBC_A3F_evecs_100 
+runanalysis modes eigenval name VCBC_A3F_evecs_100 beg 1 end 100 out VCBC_A3F_eigenval_frac_new.dat
+run
+
+quit
+
+
+#
