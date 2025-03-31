@@ -1,0 +1,13 @@
+parm /data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/VCBC-A3F_GLU_mut_nowat.prmtop name GLU_mut
+trajin /data/nvanhoorn/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/mdcrd/VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd parm GLU_mut 1 last 10
+
+readdata VCBC_A3F_evecs_new.dat name my_evecs
+runanalysis modes name my_evecs trajout pc1.mdcrd trajoutfmt netcdf trajoutmask @CA pcmin -201 pcmax 211 tmode 1
+runanalysis modes name my_evecs trajout pc2.mdcrd trajoutfmt netcdf trajoutmask @CA pcmin -182 pcmax 82 tmode 2
+runanalysis modes name my_evecs trajout pc3.mdcrd trajoutfmt netcdf trajoutmask @CA pcmin -422 pcmax 125 tmode 3
+runanalysis modes name my_evecs trajout pc4.mdcrd trajoutfmt netcdf trajoutmask @CA pcmin -104 pcmax 138 tmode 4
+
+strip !(@CA) outprefix modes
+
+run
+quit
