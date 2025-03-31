@@ -1,0 +1,11 @@
+
+parm /home/nvanhoorn/data/A3F_newstructure/VCBC_A3F_GLU_mut/redoing_everything/VCBC-A3F_GLU_mut_nowat.prmtop name nowat_prmtop
+trajin ../../../mdcrd/VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd parm nowat_prmtop
+run
+
+loadcrd ../../../mdcrd/VCBC-A3F_GLU_mut_sims1-8_first300_noBox.mdcrd parm nowat_prmtop name VCBC_A3F_coordinates
+
+crdaction VCBC_A3F_coordinates projection evecs VCBC_A3F_evecs_new.dat @CA out GLU_mut_project_onto_evecs.dat beg 1 end 10
+run
+
+quit
