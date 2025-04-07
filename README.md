@@ -20,3 +20,5 @@ Lastly, the code to make the contact maps from "Chapter 9: The Effects of the Mu
 
 ## Awknowledgements
 Thank you to the following who helped with the development of this code: Skidmore Professor Tom O'Connell, Skidmore Professor Aurelia Ball, and alumni of the Skidmore Computational Biophysics Lab.
+
+ChatGPT was also used at times, mainly for assisting with debugging, creating more effective Matplotlib figures, and using libraries (ie. mdtraj and Pandas).
