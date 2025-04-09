@@ -13,7 +13,7 @@ The PCA_analysis/Scikit-Learn_PCA/ directory contains the code relevant to "Chap
 
 The code in directory KPCA_analysis/ is for "Chapter 8: Reducing Dimensionality Through Kernel PCA". This includes multipe subdirectories for exploring KPCA using different gamma values. Additionally, the original KPCA which included scaling the values is in the kpca_scripts_with_scaling/ directory, though this analysis was not used in the thesis and is supplemental. Each of these subdirectories include five directories for each of the kernel functions. Most of these failed to run to completion, which is why the rbf kernel and the cosine kernel are the only two explored in the thesis. 
 
-The directory autoencoder_files/ contains the autoencoder training code and visualization code for "Chapter 8: Visualizing the Latent Space Through an Autoencoder." Subdirectories are for the different autoencoders trained. 
+The directory autoencoder_files/ contains the autoencoder training code and visualization code for "Chapter 8: Visualizing the Latent Space Through an Autoencoder." Subdirectories are for the different autoencoders trained and include code to train the networks, make figures, as well as the figures made. There is an additional directory here which explores a shallow ReLU network that was trained for 500 epochs; this was not included in the thesis because of time constraints. 
 
 Lastly, the code to make the contact maps from "Chapter 9: The Effects of the Mutation" is in the directory contact_maps/.
 
