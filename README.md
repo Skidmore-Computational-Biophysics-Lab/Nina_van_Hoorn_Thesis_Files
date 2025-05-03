@@ -3,7 +3,6 @@ Relevant code and files for Nina van Hoorn's 2025 undergraduate thesis. This the
 
 
 ## How to navigate this code base
-The thesis (and consequently, the code) is broken into four main categories. 
 
 The code that is relevant to **"Chapter 4: Identifying Conformational Clusters Using PTRAJ PCA"** can be found in the directory PCA_analysis/PTRAJ_PCA_combined_data/. This includes the PTRAJ scripts to run PCA on the mdcrd files, the Jupyter notebook to visualize the PCA, the notebook used to perform K-Means clustering on the PCA, and the notebook used to calculate the p-values.
 
