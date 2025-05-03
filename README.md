@@ -1,5 +1,5 @@
 # Overview
-Relevant code and files for Nina van Hoorn's 2025 undergraduate thesis. This thesis explores various dimensionality reduction techniques (mainly PCA, kernel PCA, and trained autoencoders) applied to molecular dynamics simulation data of the VCBC-A3F complex. 
+Relevant code and files for Nina van Hoorn's 2025 undergraduate thesis. This thesis explores various dimensionality reduction techniques (PCA, kernel PCA, and trained autoencoders) applied to molecular dynamics simulation data of the VCBC-A3F complex. 
 
 
 ## How to navigate this code base
